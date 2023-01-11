@@ -1,89 +1,218 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.15.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://kit.fontawesome.com/a787db6ea5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo1.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()" aria-hidden="true"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()" aria-hidden="true"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I am <br> <span>Shresth </span> Srivastava</h1>
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- about  -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_col_1">
+                    <img src="images/about.png" alt="">
+                </div>
+                <div class="about_col_2">
+                    <h1 class="sub_title">About Me</h1>
+                    <p>As a college student studying software engineering, I am deeply passionate about learning the principles and techniques used in the design, development, and maintenance of software systems. My coursework includes studying programming languages such as Python, Java and C++, data structures and algorithms, computer systems and architecture, and software engineering methodologies. I am always eager to apply the knowledge I gain in class to real-world projects, whether that's developing a new software application or troubleshooting an existing one. I am also actively working on staying up-to-date with the latest developments in the field by participating in coding competitions and hackathons. I believe this will help me to be well-rounded software engineer in future.</p>
 
+                    <div class="tab_titles">
+                        <p class="tab_links active_links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab_links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab_contents active_tabs" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/ App Interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App development</span><br>Building Android/iOS apps</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="experience">
+                        <ul>
+                            <li><span>Website</span><br>I made this website from scratch.</li>
+                            <li><span>Mp3 app</span><br>I develop the mp3 audio app player.</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="education">
+                        <ul>
+                            <li><span>B.Tech 2024</span><br>8.5 SGPA -Noida Institute of Technology, Greater Noida</li>
+                            <li><span>12th 2019</span><br>80.8%- Sriram Education Center, Kanpur</li>
+                            <li><span>10th 2017</span><br>9.0 CGPA - Delhi Public School, Azaadnagar</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- services ------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub_title">My Services</h1>
+            <div class="services_list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services.
+                    </p>
+                    <a href="https://www.google.com/search?client=firefox-b-d&q=web+development">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Development</h2>
+                    <p>Mobile app development is the act or process by which a mobile app is developed for mobile devices, such as personal digital assistants, enterprise digital assistants or mobile phones. These software applications are designed to run on mobile devices, such as a smartphone or tablet computer.
+                    </p>
+                    <a href="#https://www.google.com/search?client=firefox-b-d&q=app+development">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>UX design involves managing the user journey as they interact with a product or service, while UI design focuses on the actual construction of that product or service's interface. UI design is usually considered part of the UX design process.
+                    </p>
+                    <a href="https://www.google.com/search?client=firefox-b-d&q=ui%2Fux+design">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio     -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub_title">My Work</h1>
+            <div class="work_list">
+                <div class="work">
+                    <img src="images/work.jpg" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nisi! Sequi in obcaecati adipisci neque optio! Nisi tempora recusandae rem?</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work.jpg" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nisi! Sequi in obcaecati adipisci neque optio! Nisi tempora recusandae rem?</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work.jpg" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nisi! Sequi in obcaecati adipisci neque optio! Nisi tempora recusandae rem?</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <a href="https://github.com/Shresth16" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact_left">
+                    <h1 class="Sub_title">
+                        Contact Me
+                    </h1>
+                    <p><i class="fa-regular fa-envelope"></i>Shresthsrivastava16@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8840977036</p>
+                    <div class="social_icons">
+                        <a href="https://www.instagram.com/shresthsrivastava16/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/Shresthsrivas16"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/shresth-srivastava-425b0b215/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/resume shresth final.pdf" download="" class="btn btn2"><i class="fa-solid fa-download"></i>  Download CV</a>
+                </div>
+                <div class="contact_right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required="">
+                        <input type="email" name="Email" placeholder="Your Email" required="">
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @  this website made  by me <i class="fa-solid fa-user"></i> (Shresth Srivastava)</p>
+        </div>
+    </div>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        var tablinks=document.getElementsByClassName("tab_links");
+        var tabcontents=document.getElementsByClassName("tab_contents");
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active_links")
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active_tabs")
+            }
+            event.currentTarget.classList.add("active_links")
+            document.getElementById(tabname).classList.add("active_tabs")
+
         }
-      });
     </script>
-  </body>
+    <script>
+        var sidemenu =document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwVW9eNjV2KN0WFoW6hKIUPhvBiND4blZ0tbe_TyXIokB60f-pREctqJaSQofuf4sbVBA/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg =document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML ="Message sent Successfully.........!!!!!" 
+                setTimeout(function(){
+                    msg.innerHTML=""
+            },3000)
+            form.reset()
+        })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
 </html>
